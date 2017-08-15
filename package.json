@@ -1,0 +1,17 @@
+{
+  "name": "softrucktest",
+  "version": "1.0.0",
+  "description": "Teste desenvolvido para vaga de estágio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -o"
+  },
+  "author": "Gabriel Victor",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.10.0",
+    "localhost": "^0.2.2",
+    "lr-http-server": "^0.1.5"
+  }
+}

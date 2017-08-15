@@ -1,0 +1,105 @@
+* { 
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-image: url("../img/world.jpg"); 
+    background-size: cover;
+}
+.card{
+    background-color: #fff;     
+    margin-top: 150px;
+    margin-right: 40px;
+    margin-left: 40px;
+    padding: 24px;
+     border-radius: 25px;
+     
+    box-shadow: -1px 2px 30px -12px black;
+}
+
+.formInputs{
+    width: 100%;
+    margin-top:30px;
+    padding: 16px 0px;
+}
+
+.styled-checkbox {
+  position: absolute; 
+  opacity: 0;
+
+}
+ .styled-checkbox + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .styled-checkbox + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px; 
+    height: 20px;
+    border: 2px solid #cecccc;
+    outline: none; 
+  }
+
+   input[type="checkbox"]:focus{
+        outline:0;
+    }
+
+  .styled-checkbox:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
+   .styled-checkbox:hover + label:before {
+    background: #337ab7;
+  }
+
+   .styled-checkbox:checked + label:before {
+    background: #337ab7;
+  }
+   .styled-checkbox
+   :disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  .styled-checkbox:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  .styled-checkbox:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 
+      2px 0 0 white,
+      4px 0 0 white,
+      4px -2px 0 white,
+      4px -4px 0 white,
+      4px -6px 0 white,
+      4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+
+#map {
+
+    height: 100vh;
+}
+
+@media screen and (max-width:1200px){
+    .card{
+        margin-bottom: 40px; 
+        margin-top:100px;
+    }
+}

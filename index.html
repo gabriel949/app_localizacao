@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="localizar">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./vendors/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="./vendors/angular.js"></script>
+    <script src="./vendors/jquery.min.js"></script>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqv5WYdsEX8ZgNyiFZb16PHc_L76Pgvdw&libraries=places,visualization"
+        defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+</head>
+
+<body ng-controller="main">
+
+    <div class='container-fluid'>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="form-group">
+                        <input class="form-control"  type="text" ng-model="city" id="city" name="" value="">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" ng-model="radius" id="radius" name="" value="" ng-keyup="filterNumber()" placeholder="Digite o raio de alcance">
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" ng-model="findCategorie">
+                            <option value="">Categoria</option>
+                            <option  value="{{categorie.id}}" ng-repeat="categorie in categories">{{categorie.shortName}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input class="btn-sm btn btn-primary" type="button" value="Top 5 lugares próximos" ng-click="rankedsChekins()">
+                          <input class="btn-sm btn btn-success" type="button" ng-disabled="!city || !radius" value="Pesquisar" ng-click="getPlace()">
+                    </div>
+                    <div class="checkbox">
+                       
+                    <input id="styled-checkbox-1" class="styled-checkbox" value"value1" ng-disabled="!city || !radius" type="checkbox" ng-click="viewHeatMap()" ng-model="checkBox">
+                        <label for="styled-checkbox-1"> Mapa de Calor</label>
+                    </div>  
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div id="map"></div>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/service/mapsService.js"></script>
+    <script src="js/service/foursquareService.js"></script>
+</body>
+
+</html>
