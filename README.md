@@ -10,7 +10,7 @@ Dando-lhes ainda a opção de ver os 5 lugares mais recomendados e mais perto do
 Baixe o projeto pelo seguinte comando:
 
 ```
-$ git clone https://github.com/gabriel949/Aplicacao_Localizacao.git
+$ git clone https://github.com/gabriel949/app_localizacao.git
 ```
 
 Navegue para dentro da pasta:
