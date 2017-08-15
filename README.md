@@ -16,7 +16,7 @@ $ git clone https://github.com/gabriel949/app_localizacao.git
 Navegue para dentro da pasta:
 
 ```
-cd Aplicacao_Localizacao
+cd app_localizacao
 ```
 
 Para instalar as dependências do projeto  basta executar o comando abaixo dentro do diretório do projeto 
